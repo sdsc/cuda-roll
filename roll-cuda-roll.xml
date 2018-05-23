@@ -1,0 +1,7 @@
+<roll name="cuda-roll" interface="4.0">
+	<timestamp time="16:59:10" date="Apr 23 2018" tz="PDT"/>
+	<color edge="lawngreen" node="lawngreen"/>
+	<info version="2018.04.23" release="7.0" arch="x86_64"/>
+	<iso maxsize="0" bootable="0" mkisofs=""/>
+	<rpm rolls="0" bin="1" src="0"/>/
+</roll>
