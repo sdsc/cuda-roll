@@ -1,10 +1,17 @@
 include version.mk
 
-default: mirrorbase
+default: createroll
 
-# Create the Base OS Roll
-mirrorbase:
-	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(BASEPATH) arch=$(ARCH) rollname=$(DISTRO) version=$(VERSION) release=$(DATE)
+# Create the mirror...
+# NOTE: Because of the structure of the nVIDIA repository the resulting ISO will be empty...
+mirrorrepo:
+	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(BASEPATH) arch=$(ARCH) rollname=$(DISTRO) version=$(VERSION) release=$(RELEASE)
+
+createroll:
+	/bin/rm -f ./$(DISTRO)-$(VERSION)-0.$(ARCH).disk1.iso
+	/bin/ln -sf ./developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64 ./RPMS
+	/opt/rocks/bin/rocks create roll roll-$(DISTRO).xml
+	/bin/rm -rf ./disk1
 
 testing:
 	echo "arch is " $(ARCH)
