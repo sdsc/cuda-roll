@@ -29,8 +29,9 @@ This roll requires ~25GB of free space to download all of the CUDA RPMs in the N
 # cd /export/rocks/install
 # rocks create distro
 ```
-6. Add cuda support to a test system using yum and the cuda metapackages...
+6. Add cuda support to a test system using yum and the CUDA metapackages of your choice...
 ```
 # yum install cuda-7-0 cuda-7-5 cuda-8-0 cuda-9-2
 ```
-7. Determine how you'd like to deploy cuda to your cluster and implement that.
+
+It is left up to the cluster administrator how to install the RPMs on the nodes.
