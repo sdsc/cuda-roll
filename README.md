@@ -19,6 +19,12 @@ This roll requires ~28GB of free space to download all of the CUDA RPMs in the N
 ```
 # make createroll
 ```
+
+*NOTE: It is a quirk of the NVIDIA CUDA repository and the Rocks repository
+mirror / roll creation process that requires these two non-standard steps. For
+more details see the INFO.md file in this repository.*
+
+
 4. Add/enable the cuda-rhel7 roll to your Rocks distribution with...
 ```
 # rocks add roll cuda-rhel7-*
