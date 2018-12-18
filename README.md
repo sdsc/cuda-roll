@@ -17,7 +17,7 @@ This roll requires ~25GB of free space to download all of the CUDA RPMs in the N
 ```
 3. Create the roll ISO with...
 ```
-# make createrepo
+# make createroll
 ```
 4. Add/enable the cuda-rhel7 roll to your Rocks distribution with...
 ```
