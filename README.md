@@ -6,19 +6,25 @@ There are no graph or node files defining what to install on your nodes. That is
 
 Modify the `version.mk` file to change from rhel7 to rhel6 RPMs.
 
-This roll requires ~25GB of free space to download all of the CUDA RPMs in the NVIDIA repository and another ~8GB to create the Rocks roll ISO file.
+This roll requires ~28GB of free space to download all of the CUDA RPMs in the NVIDIA repository and another ~10GB to create the Rocks roll ISO file.
 
 ## Instructions
 
-1. Clone this repository into a directory/filesystem with at least 36GB of free space
+1. Clone this repository into a directory/filesystem with at least 40GB of free space
 2. Mirror the NVIDIA CUDA repository with...
 ```
 # make mirrorrepo
 ```
 3. Create the roll ISO with...
 ```
-# make createrepo
+# make createroll
 ```
+
+*NOTE: It is a quirk of the NVIDIA CUDA repository and the Rocks repository
+mirror / roll creation process that requires these two non-standard steps. For
+more details see the INFO.md file in this repository.*
+
+
 4. Add/enable the cuda-rhel7 roll to your Rocks distribution with...
 ```
 # rocks add roll cuda-rhel7-*
