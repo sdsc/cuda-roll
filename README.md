@@ -15,7 +15,11 @@ This roll requires ~28GB of free space to download all of the CUDA RPMs in the N
 ```
 # make mirrorrepo
 ```
-3. Create the roll ISO with...
+3. [Optionally] filter the RPM in the repository mirror with...
+```
+# make filterrepo
+```
+4. Create the roll ISO with...
 ```
 # make createroll
 ```
@@ -25,17 +29,17 @@ mirror / roll creation process that requires these two non-standard steps. For
 more details see the INFO.md file in this repository.*
 
 
-4. Add/enable the cuda-rhel7 roll to your Rocks distribution with...
+5. Add/enable the cuda-rhel7 roll to your Rocks distribution with...
 ```
 # rocks add roll cuda-rhel7-*
 # rocks enable roll cuda-rhel7
 ```
-5. Rebuild your Rocks distribution with...
+6. Rebuild your Rocks distribution with...
 ```
 # cd /export/rocks/install
 # rocks create distro
 ```
-6. Add cuda support to a test system using yum and the CUDA metapackages of your choice...
+7. Add cuda support to a test system using yum and the CUDA metapackages of your choice...
 ```
 # yum install cuda-7-0 cuda-7-5 cuda-8-0 cuda-9-2
 ```
