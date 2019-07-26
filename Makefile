@@ -8,6 +8,7 @@ mirrorrepo:
 	[ -f /root/.wgetrc ] && mv -v /root/.wgetrc /root/.wgetrc.sav
 	/bin/cp ./wgetrc /root/.wgetrc
 	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(BASEPATH) arch=$(ARCH) rollname=$(DISTRO) version=$(VERSION) release=$(RELEASE)
+	/usr/bin/yumdownloader --enablerepo=epel --destdir=$(MIRRORPATH) --downloadonly libva-vdpau-driver opencl-filesystem ocl-icd
 	[ -f /root/.wgetrc.sav ] && mv -vf /root/.wgetrc.sav /root/.wgetrc
 
 createroll:
