@@ -5,7 +5,10 @@ default: createroll
 # Create the mirror...
 # NOTE: Because of the structure of the nVIDIA repository the resulting ISO will be empty...
 mirrorrepo:
+	[ -f /root/.wgetrc ] && mv -v /root/.wgetrc /root/.wgetrc.sav
+	/bin/cp ./wgetrc /root/.wgetrc
 	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(BASEPATH) arch=$(ARCH) rollname=$(DISTRO) version=$(VERSION) release=$(RELEASE)
+	[ -f /root/.wgetrc.sav ] && mv -vf /root/.wgetrc.sav /root/.wgetrc
 
 createroll:
 	/bin/rm -f ./$(DISTRO)-$(VERSION)*.iso
