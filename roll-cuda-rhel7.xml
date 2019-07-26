@@ -1,7 +1,7 @@
 <roll name="cuda-rhel7" interface="4.0">
-	<timestamp time="10:30:20" date="Aug 09 2018" tz="PDT"/>
+	<timestamp time="17:13:26" date="Jul 25 2019" tz="PDT"/>
 	<color edge="lawngreen" node="lawngreen"/>
-	<info version="2018.08.09" release="0" arch="x86_64"/>
+	<info version="2019.07.25" release="0" arch="x86_64"/>
 	<iso maxsize="0" bootable="0" mkisofs=""/>
 	<rpm rolls="0" bin="1" src="0"/>/
 </roll>
