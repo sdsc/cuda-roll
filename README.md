@@ -41,7 +41,7 @@ more details see the INFO.md file in this repository.*
 ```
 7. Add cuda support to a test system using yum and the CUDA metapackages of your choice...
 ```
-# yum install cuda-7-0 cuda-7-5 cuda-8-0 cuda-9-2
+# yum install cuda-7-5 cuda-8-0 cuda-9-2 cuda-10-1
 ```
 
 It is left up to the cluster administrator how to install the RPMs on the nodes.
